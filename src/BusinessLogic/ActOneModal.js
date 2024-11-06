@@ -5,8 +5,12 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ActOneModal = ({ isOpen, onClose }) => {
+
+
+    const Navigate = useNavigate()
     const [actOneText, setActOneText] = useState(''); 
     const [loading, setLoading] = useState(false); // State to manage loading status
     const [error, setError] = useState(null); // State to manage error messages
@@ -31,7 +35,9 @@ const ActOneModal = ({ isOpen, onClose }) => {
             console.log('Generated data:', response.data); // Log the response
 
             // Redirect to the editing page with the OID and generated screenplay ID
-            window.location.href = `http://localhost:3000/editinggg/${OID}/${response.data.Treatment_ID}`;
+            // window.location.href = `http://localhost:3000/editinggg/${OID}/${response.data.Treatment_ID}`;
+
+            Navigate(`/editinggg/${OID}/${response.data.Treatment_ID}`)
         } catch (error) {
             console.error('Error generating treatment:', error);
             setError('Failed to generate treatment. Please try again.'); // Set error message

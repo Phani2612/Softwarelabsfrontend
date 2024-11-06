@@ -4,10 +4,10 @@ import { FaUpload, FaPaperPlane } from 'react-icons/fa';
 import Server_URL from '../SERVER_URL';
 import Loader from '../components/Loader';
 import { useParams } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const ScriptCreationModal = ({ isOpen, onClose, back }) => {
 
-
+    const Navigate = useNavigate()
     const {OID} = useParams()
 
    
@@ -95,7 +95,9 @@ const ScriptCreationModal = ({ isOpen, onClose, back }) => {
             console.log('Success:', result);
     
             // Redirect to the editor page with OID
-            window.location.href = `http://localhost:3000/editing/${result.OID}/${result.Screen_Play_ID}`;
+            // window.location.href = `http://localhost:3000/editing/${result.OID}/${result.Screen_Play_ID}`;
+
+            Navigate(`/editing/${result.OID}/${result.Screen_Play_ID}`)
 
 
         } catch (error) {

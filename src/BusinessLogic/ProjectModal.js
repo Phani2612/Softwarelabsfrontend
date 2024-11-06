@@ -3,9 +3,14 @@ import React, { useState } from 'react';
 import './ProjectModal.css'; // Import your CSS for the modal
 import axios from 'axios';
 import Server_URL from '../SERVER_URL';
+import { useNavigate } from 'react-router-dom';
 
 
 function ProjectModal({ isOpen, onClose }) {
+
+    const Navigate = useNavigate()
+
+
     const [title, setTitle] = useState('');
     const [type, setType] = useState('Feature Film');
     const [description, setDescription] = useState('');
@@ -36,7 +41,9 @@ function ProjectModal({ isOpen, onClose }) {
             const projectId = response.data.projectId;
     
             // Redirect to the project page for the created project
-            window.location.href = `http://localhost:3000/project/${projectId}`;
+            // window.location.href = `http://localhost:3000/project/${projectId}`;
+
+            Navigate(`/project/${projectId}`)
     
             // Optionally close the modal
             onClose();

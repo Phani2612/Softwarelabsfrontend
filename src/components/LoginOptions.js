@@ -16,36 +16,42 @@ const LoginOptions = ({ onEmailClick }) => {
 
   async function googleLogin() {
     signInWithPopup(myAuth, myProvider)
-      .then(async function (output) {
-        const user = myAuth.currentUser;
-        const username = user.displayName;
-        const email = user.email;
-        const uid = user.uid;
-        const profilePic = user.photoURL;
+        .then(async function (output) {
+            const user = myAuth.currentUser;
+            const username = user.displayName;
+            const email = user.email;
+            const uid = user.uid;
+            const profilePic = user.photoURL;
 
-        localStorage.setItem('User_Email', email);
-        localStorage.setItem('User_Photo', profilePic);
+            localStorage.setItem('User_Email', email);
+            localStorage.setItem('User_Photo', profilePic);
 
-        setAuth(true)
+            try {
+                const response = await axios.post(`${Server_URL}/store-user`, {
+                    username,
+                    email,
+                    uid,
+                    profilePic
+                });
 
-        try {
-          const response = await axios.post(`${Server_URL}/store-user`, {
-            username,
-            email,
-            uid,
-            profilePic
-          });
-          console.log('User stored in database:', response.data);
-        } catch (error) {
-          console.error('Error storing user in database:', error);
-        }
+                console.log('User stored in database:', response.data);
+                setAuth(true); // Assuming this sets your auth state
 
-        window.location.pathname = '/dashboard';
-      })
-      .catch((error) => {
-        console.log('Error during Firebase login:', error);
-      });
-  }
+                // Optionally, you can store the session token in localStorage
+                // if you need it on the client-side (but it’s less secure).
+                localStorage.setItem('Session_token', response.data.session);
+
+
+                window.location.pathname = '/dashboard'
+
+            } catch (error) {
+                console.error('Error storing user in database:', error);
+            }
+        })
+        .catch((error) => {
+            console.log('Error during Firebase login:', error);
+        });
+}
 
   return (
     <div className="login-options-container">

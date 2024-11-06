@@ -1,3 +1,3 @@
-const Server_URL = 'http://localhost:5000'
+const Server_URL = 'https://softwarelabstask.onrender.com'
 
 export default Server_URL

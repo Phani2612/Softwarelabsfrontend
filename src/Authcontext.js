@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
         });
 
 
-        console.log('auth context' , response)
+        console.log('auth' , auth)
 
         // Handle the response
         if (response.status === 200 && response.data.authenticated) {
