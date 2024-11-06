@@ -1,0 +1,213 @@
+.script-display {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    justify-content: space-between; /* Space out the boxes */
+    margin: 20px; /* Add some margin around the display area */
+}
+
+.script-item {
+    position: relative; /* Position relative for dropdown positioning */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Border to define the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    width: calc(50% - 10px); /* Two boxes per row with space in between */
+    margin-bottom: 20px; /* Space between rows */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation on hover */
+}
+
+.script-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.script-item h3 {
+    color: #333; /* Dark text color for headings */
+    margin: 0 0 10px; /* Space below the heading */
+}
+
+.script-meta {
+    background-color: #e9ecef; /* Light gray background for the meta section */
+    padding: 10px; /* Padding inside the meta section */
+    border-radius: 5px; /* Rounded corners for the meta section */
+    margin-bottom: 15px; /* Space below the meta section */
+}
+
+.script-meta span {
+    display: inline-block; /* Ensure elements are in-line */
+    margin-right: 10px; /* Space between genre and language */
+    color: #555; /* Color for the genre and language */
+}
+
+.script-options {
+    position: absolute; /* Position the dropdown relative to the box */
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+    cursor: pointer; /* Show pointer on hover */
+
+  
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position relative to the script item */
+    background-color: white; /* White background for dropdown */
+    border: 1px solid #ddd; /* Border for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    z-index: 10; /* Make sure dropdown appears above other elements */
+
+    
+   
+}
+
+.dropdown-menu.show {
+    display: block; /* Show dropdown when active */
+    margin-left: -150px;
+}
+
+.dropdown-item {
+    padding: 10px; /* Padding for each item */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #333; /* Text color */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+
+#particular-h2{
+
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    .script-display {
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .script-item {
+        width: calc(100% - 20px); /* Single item per row on mobile */
+        margin-bottom: 15px; /* Reduced margin for better spacing */
+        padding: 15px; /* Smaller padding */
+    }
+
+    .script-item h3 {
+        font-size: 18px; /* Adjust heading font size */
+    }
+
+    .script-meta {
+        padding: 8px; /* Smaller padding */
+        margin-bottom: 12px; /* Reduced margin below the meta section */
+    }
+
+    .script-options {
+        top: 5px; /* Adjust positioning of options */
+        right: 5px; /* Adjust positioning of options */
+    }
+
+    .dropdown-menu {
+        margin-left: -100px; /* Adjust dropdown position for smaller screens */
+    }
+
+    .dropdown-item {
+        padding: 8px; /* Smaller padding for dropdown items */
+        font-size: 14px; /* Adjust font size for dropdown items */
+    }
+
+    #particular-h2 {
+        margin-top: 20px; /* Reduced margin for smaller screens */
+    }
+}
+
+/* Media Queries for Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .script-display {
+        margin: 15px; /* Adjust margin for tablet screens */
+    }
+
+    .script-item {
+        width: calc(50% - 10px); /* Two items per row on tablets */
+        margin-bottom: 15px; /* Consistent spacing between items */
+        padding: 18px; /* Slightly smaller padding */
+    }
+
+    .script-item h3 {
+        font-size: 20px; /* Adjust heading font size */
+    }
+
+    .script-meta {
+        padding: 9px; /* Adjust padding */
+        margin-bottom: 14px; /* Adjust margin below the meta section */
+    }
+
+    .script-options {
+        top: 8px; /* Adjust options positioning */
+        right: 8px;
+    }
+
+    .dropdown-menu {
+        margin-left: -120px; /* Adjust dropdown position */
+    }
+
+    .dropdown-item {
+        padding: 9px; /* Adjust padding */
+        font-size: 15px; /* Adjust font size for dropdown items */
+    }
+
+    #particular-h2 {
+        margin-top: 25px; /* Adjust margin for the heading */
+    }
+}
+
+/* Media Queries for Desktop */
+@media (min-width: 1025px) {
+    .script-display {
+        margin: 20px; /* Default margin for larger screens */
+    }
+
+    .script-item {
+        width: calc(50% - 10px); /* Two items per row */
+        margin-bottom: 20px; /* Consistent margin between items */
+        padding: 20px; /* Standard padding */
+    }
+
+    .script-item h3 {
+        font-size: 22px; /* Default heading font size */
+    }
+
+    .script-meta {
+        padding: 10px; /* Default padding */
+        margin-bottom: 15px; /* Default margin below meta section */
+    }
+
+    .script-options {
+        top: 10px; /* Standard positioning for options */
+        right: 10px;
+    }
+
+    .dropdown-menu {
+        margin-left: -150px; /* Standard dropdown position */
+    }
+
+    .dropdown-item {
+        padding: 10px; /* Default padding for dropdown items */
+        font-size: 16px; /* Default font size for dropdown items */
+    }
+
+    #particular-h2 {
+        margin-top: 30px; /* Default margin for larger screens */
+    }
+}

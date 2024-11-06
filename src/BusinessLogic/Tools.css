@@ -1,0 +1,118 @@
+.tools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the content */
+    padding: 20px; /* Adding some padding */
+    margin-top: 40px;
+}
+
+.movie-reel {
+    margin-bottom: 20px; /* Space between the reel and the buttons */
+   
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Buttons stacked vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+.primary-button {
+    background-color: #2196F3; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Centering icon and text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.primary-button:hover {
+    background-color: #2196F3; /* Darker blue on hover */
+}
+
+.button-icon {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+
+
+
+
+
+/* For small screens (Mobile devices) */
+@media (max-width: 600px) {
+    .tools-container {
+        padding: 10px; /* Reduce padding on small screens */
+        margin-top: 20px; /* Reduced margin on top */
+    }
+
+    .movie-reel {
+        margin-bottom: 15px; /* Less space between the reel and buttons */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Increased gap between buttons */
+        align-items: center; /* Center the buttons */
+    }
+
+    .primary-button {
+        width: 100%; /* Make buttons full width */
+        padding: 12px 20px; /* Adjust button padding */
+    }
+
+    .primary-button:hover {
+        background-color: #1976D2; /* Darker blue on hover */
+    }
+}
+
+
+
+
+/* For medium screens (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .tools-container {
+        padding: 15px; /* Adjust padding for tablets */
+        margin-top: 30px; /* Adjust margin for tablets */
+    }
+
+    .movie-reel {
+        margin-bottom: 18px; /* Slightly reduced space between the reel and buttons */
+    }
+
+    .button-container {
+        flex-direction: row; /* Maintain horizontal layout for buttons */
+        gap: 15px; /* Increased gap for better spacing */
+        justify-content: center; /* Center buttons on the tablet */
+    }
+
+    .primary-button {
+        padding: 12px 25px; /* Adjust padding for tablets */
+    }
+}
+
+/* For large screens (Desktop) */
+@media (min-width: 1025px) {
+    .tools-container {
+        padding: 20px; /* Maintain base padding for desktop */
+        margin-top: 40px; /* Maintain base margin for desktop */
+    }
+
+    .movie-reel {
+        margin-bottom: 20px; /* Space between the reel and the buttons */
+    }
+
+    .button-container {
+        flex-direction: row; /* Keep buttons in a row */
+        gap: 20px; /* Keep larger gap on larger screens */
+        justify-content: center; /* Center the buttons */
+    }
+
+    .primary-button {
+        padding: 10px 30px; /* Standard padding for desktop */
+    }
+}

@@ -1,0 +1,193 @@
+.particular-project-details-container {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    gap: 50px;
+
+ 
+   
+  }
+  .Project-cover {
+    border: 1px solid black;
+    width: 500px; /* Example fixed width */
+    height: 250px; /* Example fixed height */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden; /* Hides overflow content */
+    box-sizing: border-box; /* Includes padding in width/height */
+}
+  .cover-image-placeholder {
+    
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cover-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+
+    
+  }
+  
+  .generate-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+   
+  }
+  
+  .upload-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  .options-modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Position relative to the title */
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above other content */
+    margin-top: 5px; /* Space between title and options */
+   
+}
+
+.option-box {
+    margin: 5px 0; /* Space between buttons */
+}
+
+.option-box button {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer on hover */
+    padding: 5px 10px; /* Padding around buttons */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.option-box button:hover {
+    background: rgba(0, 0, 255, 0.1); /* Light blue background on hover */
+}
+
+h3 {
+    position: relative; /* To position the options modal correctly */
+}
+
+
+
+
+
+
+
+
+/* For small screens (Mobile devices) */
+@media (max-width: 600px) {
+  .particular-project-details-container {
+      flex-direction: column; /* Stack items vertically on small screens */
+      gap: 20px; /* Reduced gap between items */
+  }
+
+  .Project-cover {
+      width: 100%; /* Full width for the project cover */
+      height: auto; /* Auto height to maintain aspect ratio */
+  }
+
+  .cover-image-placeholder {
+      height: 60%; /* Adjust placeholder size on small screens */
+  }
+
+  .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center buttons */
+      margin-top: 20px;
+  }
+
+
+  .options-modal {
+      width: 90%; /* Modal takes 90% of screen width */
+      position: relative; /* Fix positioning */
+      margin-top: 10px; /* Adjust modal space */
+  }
+}
+
+/* For medium screens (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .particular-project-details-container {
+      flex-direction: row; /* Maintain row direction for tablets */
+      gap: 30px; /* Adjust gap */
+  }
+
+  
+
+  .cover-image-placeholder {
+      height: 65%; /* Adjust placeholder size */
+  }
+
+  .button-container {
+      margin-top: 25px;
+  }
+
+  .generate-button,
+  .upload-button {
+     
+
+      width: 50%;
+
+      height: 70%;
+  }
+
+  .options-modal {
+      width: 80%; /* Adjust modal size for tablet screens */
+      margin-top: 10px;
+  }
+}
+
+/* For large screens (Desktop) */
+@media (min-width: 1025px) {
+  .particular-project-details-container {
+      flex-direction: row; /* Keep row direction for large screens */
+      gap: 50px; /* Maintain larger gap */
+  }
+
+ 
+
+  .button-container {
+      margin-top: 30px;
+  }
+
+  .generate-button,
+  .upload-button {
+      padding: 10px 20px; /* Standard button padding */
+  }
+
+  .options-modal {
+      width: 300px; /* Fixed width for modal on larger screens */
+  }
+}

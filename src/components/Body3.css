@@ -1,0 +1,308 @@
+.body3container{
+
+margin-top: 50px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+
+#body3box1 , #body3box3  {
+
+
+     display: flex;
+
+     flex-direction: row;
+
+     justify-content: center;
+
+     justify-content: space-evenly;
+
+     gap: 150px;
+
+     margin-left: 250px;
+
+     margin-top: 200px;
+
+}
+
+
+#body3box2 {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    justify-content: space-evenly;
+
+    gap: 150px;
+    margin-right: 90px;
+
+    margin-top: 100px;
+
+}
+
+#body3box4{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    justify-content: space-evenly;
+
+    margin-top: 150px;
+
+    gap : 50px;
+
+    margin-left: 50px;
+
+    margin-bottom: 40px;
+}
+
+
+
+#body3header1{
+
+    color : white
+}
+
+
+#body3header2 , #body3header5 , #body3header6{
+
+     color: white;
+}
+
+
+
+
+#body3header22 , #body3header52{
+
+    text-align: end;
+    color: white;
+}
+
+
+#body3video{
+
+    
+    border: 5px solid rgba(255, 255, 255, 0.7); /* Light border */
+    padding: 15px; /* Space around the video */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    display: inline-block; /* To align properly with other content */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    position: relative;
+    box-sizing: border-box;
+}
+
+#video{
+
+    width: 400px;
+}
+
+
+.video-container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+
+#lastheader{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 70px;
+}
+
+
+
+#producers{
+
+ float: right;
+
+ width: 230px;
+}
+
+
+#body3image1 , #body3image3 {
+
+    transform: skewY(-28deg);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px aqua;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+#Body3image1::before,
+#Body3image1::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 10px;
+  transform: skewX(-5deg);
+  z-index: -1;
+  animation: borderAnimation 3s infinite ease-in-out;
+}
+
+#Body3image1::before {
+  border: 3px solid #ff7f50; /* Coral border */
+}
+
+#Body3image1::after {
+  border: 3px solid #1e90ff; /* Dodger blue border */
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+}
+
+
+
+
+
+
+#body3image2{
+
+    transform: skewY(20deg);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px aqua;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+#Body3image2::before,
+#Body3image2::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 10px;
+  transform: skewX(-5deg);
+  z-index: -1;
+  animation: borderAnimation 3s infinite ease-in-out;
+}
+
+#Body3image2::before {
+  border: 3px solid #ff7f50; /* Coral border */
+}
+
+#Body3image2::after {
+  border: 3px solid #1e90ff; /* Dodger blue border */
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+}
+
+
+#bold1{
+
+    font-size: 50px;
+}
+
+
+
+
+/* Media Queries */
+
+/* For small screens (up to 600px) */
+@media screen and (max-width: 600px) {
+    #body3box1, #body3box3, #body3box2, #body3box4 {
+        flex-direction: column; /* Stack the boxes vertically on small screens */
+        gap: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #body3box1, #body3box3 {
+        margin-top: 100px; /* Reduce margin for small screens */
+    }
+
+    #body3video {
+        width: 100%; /* Make the video responsive */
+        margin-right: 0;
+    }
+
+    #body3image1, #body3image2, #body3image3 {
+        transform: skewY(0deg); /* Remove the skew for smaller screens */
+        width: 100%; /* Ensure images are responsive */
+        box-shadow: 0 5px 10px aqua;
+    }
+
+    #lastheader {
+        margin-top: 30px;
+    }
+
+    #bold1 {
+        font-size: 35px; /* Reduce font size on smaller screens */
+    }
+
+    #producers {
+        float: none;
+        width: 100%;
+        text-align: center; /* Center the producers section on small screens */
+    }
+}
+
+/* For medium screens (600px - 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #body3box1, #body3box3, #body3box2, #body3box4 {
+        flex-direction: row; /* Keep them in a row but reduce the gap */
+        gap: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+   
+
+    #body3image1, #body3image2, #body3image3 {
+        width: 80%; /* Adjust image sizes */
+    }
+
+    #bold1 {
+        font-size: 40px; /* Adjust font size for medium screens */
+    }
+
+    #producers {
+        width: 200px;
+    }
+
+
+
+
+  #body3video{
+    
+
+    height: 300px;
+  }
+
+  #video{
+
+    width: 300px;
+
+  }
+  
+   
+}
+
+/* For large screens (1025px - 1440px) */
+

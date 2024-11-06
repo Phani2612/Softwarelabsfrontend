@@ -1,0 +1,229 @@
+/* Sidebar.css */
+/* Sidebar.css */
+.sidebar {
+    width: 250px; /* Width of the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #282c34; /* Background color */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Spacing inside the sidebar */
+    position: fixed; /* Fixed position on the left side */
+    top: 0; /* Align with the top of the viewport */
+    left: 0; /* Align to the left */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+
+.sidebar-header {
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.sidebar-content {
+    flex-grow: 1; /* Allow content to grow */
+}
+
+.add-button {
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Center items vertically */
+    background-color: #61dafb; /* Button background color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Spacing inside the button */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    color: #282c34; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth background transition */
+    margin-bottom: 15px; /* Space between buttons */
+}
+
+.add-button:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
+}
+
+.add-icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+
+.project-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Placeholder background */
+    margin: 5px;
+    position: relative;
+}
+
+.icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon-letter {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+/* For max-width 600px (small screens like smartphones) */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height based on content */
+        position: relative; /* Sidebar should scroll with content */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .sidebar-header {
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .sidebar-content {
+        flex-grow: 0; /* Don't grow content */
+    }
+
+    .add-button {
+        width: 100%; /* Full width for buttons */
+        padding: 12px 20px; /* Adjust padding for better touch targets */
+        font-size: 14px; /* Smaller font size */
+        margin-bottom: 10px; /* Reduced space between buttons */
+    }
+
+    .project-icons {
+        flex-direction: row; /* Arrange project icons horizontally */
+        overflow-x: auto; /* Allow horizontal scrolling if too many icons */
+    }
+
+    .project-icon {
+        width: 40px; /* Smaller icon size */
+        height: 40px;
+        margin: 5px; /* Reduced margin */
+    }
+
+    .icon-letter {
+        font-size: 20px; /* Smaller letter size */
+    }
+}
+
+/* For max-width 768px (medium screens like tablets) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for tablets */
+        height: auto;
+        position: relative;
+        padding: 15px; /* Slightly more padding */
+    }
+
+    .sidebar-header {
+        margin-bottom: 20px; /* Keep space below header */
+    }
+
+    .add-button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .project-icons {
+        flex-direction: row; /* Horizontal layout for icons */
+        justify-content: flex-start; /* Align icons to the start */
+    }
+
+    .project-icon {
+        width: 45px; /* Slightly larger icons */
+        height: 45px;
+    }
+
+    .icon-letter {
+        font-size: 22px; /* Slightly larger letter size */
+    }
+}
+
+/* For max-width 1024px (larger tablets and small laptops) */
+@media (max-width: 1024px) {
+    .sidebar {
+       
+        display: none;
+    }
+
+    .sidebar-header {
+        margin-bottom: 20px;
+    }
+
+    .add-button {
+        width: 100%;
+        padding: 14px 25px; /* Adjust padding for easier interaction */
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .project-icons {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap; /* Wrap icons when needed */
+    }
+
+    .project-icon {
+        width: 50px; /* Standard icon size */
+        height: 50px;
+        margin: 8px;
+    }
+
+    .icon-letter {
+        font-size: 24px;
+    }
+}
+
+/* For min-width 1200px (large screens like desktops) */
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 250px; /* Sidebar stays at 250px width */
+        height: 100vh; /* Full viewport height */
+        position: fixed; /* Fixed sidebar on large screens */
+        padding: 20px; /* Normal padding */
+    }
+
+    .sidebar-header {
+        margin-bottom: 20px;
+    }
+
+    .add-button {
+        width: 100%;
+        padding: 15px 30px; /* Larger padding for comfortable interaction */
+        font-size: 18px;
+        margin-bottom: 20px; /* Space between buttons */
+    }
+
+    .project-icons {
+        flex-direction: column; /* Stack icons vertically for large screens */
+        justify-content: center; /* Center icons */
+    }
+
+    .project-icon {
+        width: 60px; /* Larger icon size */
+        height: 60px;
+        margin: 10px;
+    }
+
+    .icon-letter {
+        font-size: 26px; /* Larger font size for icon letters */
+    }
+}

@@ -1,0 +1,266 @@
+/* src/components/JourneyModal.css */
+
+.journeyModal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.journeyModal-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.journeyModal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.journeyModal-close-button:hover {
+    color: #333;
+}
+
+.journeyModal-heading {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.journeyModal-subheading {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.journeyModal-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.journeyModal-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.journeyModal-option:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.journeyModal-icon {
+    font-size: 30px;
+    color: blue; /* Set your icon color here */
+}
+
+.journeyModal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.journeyModal-back-button,
+.journeyModal-cancel-button,
+.journeyModal-next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.journeyModal-back-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.journeyModal-back-button:hover {
+    background-color: #e0e0e0;
+}
+
+.journeyModal-cancel-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+.journeyModal-cancel-button:hover {
+    background-color: #b3b3b3;
+}
+
+.journeyModal-next-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.journeyModal-next-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    .journeyModal-box {
+        width: 90%; /* Full width for smaller screens */
+        padding: 20px; /* Reduced padding for better fit */
+    }
+
+    .journeyModal-heading {
+        font-size: 22px; /* Smaller heading font */
+        margin-bottom: 8px; /* Reduced space below heading */
+    }
+
+    .journeyModal-subheading {
+        font-size: 16px; /* Smaller subheading font */
+        margin-bottom: 15px; /* Reduced space below subheading */
+    }
+
+    .journeyModal-options-container {
+        gap: 10px; /* Reduced gap between options */
+    }
+
+    .journeyModal-option {
+        padding: 12px; /* Smaller padding for options */
+        font-size: 14px; /* Smaller text size for options */
+    }
+
+    .journeyModal-footer {
+        flex-direction: column;
+        gap: 15px; /* Stack footer buttons on top of each other */
+    }
+
+    .journeyModal-back-button,
+    .journeyModal-cancel-button,
+    .journeyModal-next-button {
+        width: 100%; /* Make buttons full-width */
+        padding: 12px; /* Adjust padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .journeyModal-close-button {
+        font-size: 20px; /* Smaller close button */
+        top: 10px;
+        right: 10px; /* Positioning for smaller screens */
+    }
+}
+
+/* Media Queries for Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .journeyModal-box {
+        width: 80%; /* Adjust width for medium-sized screens */
+        padding: 25px; /* Adjust padding for a better fit */
+    }
+
+    .journeyModal-heading {
+        font-size: 24px; /* Slightly smaller heading */
+    }
+
+    .journeyModal-subheading {
+        font-size: 17px;
+    }
+
+    .journeyModal-options-container {
+        gap: 12px; /* Moderate gap for tablet screens */
+    }
+
+    .journeyModal-option {
+        padding: 13px; /* Slightly smaller padding */
+        font-size: 15px; /* Adjust text size */
+    }
+
+    .journeyModal-footer {
+        gap: 15px; /* Maintain button gap */
+    }
+
+    .journeyModal-back-button,
+    .journeyModal-cancel-button,
+    .journeyModal-next-button {
+        width: 48%; /* Buttons take up almost half the width */
+        padding: 15px; /* Adjust padding */
+        font-size: 15px; /* Adjust font size */
+    }
+
+    .journeyModal-close-button {
+        font-size: 22px; /* Slightly larger close button */
+    }
+}
+
+/* Media Queries for Desktop */
+@media (min-width: 1025px) {
+    .journeyModal-box {
+        width: 500px; /* Fixed width for desktop */
+        padding: 30px 40px; /* Standard padding */
+    }
+
+    .journeyModal-heading {
+        font-size: 26px; /* Original heading font size */
+    }
+
+    .journeyModal-subheading {
+        font-size: 18px; /* Original subheading font size */
+    }
+
+    .journeyModal-options-container {
+        gap: 15px; /* Maintain default gap */
+    }
+
+    .journeyModal-option {
+        padding: 15px; /* Standard padding for options */
+    }
+
+    .journeyModal-footer {
+        gap: 10px; /* Keep the gap as it is */
+    }
+
+    .journeyModal-back-button,
+    .journeyModal-cancel-button,
+    .journeyModal-next-button {
+        width: 32%; /* Buttons spaced equally */
+        padding: 15px 25px; /* Standard padding for larger screens */
+        font-size: 16px; /* Original font size */
+    }
+
+    .journeyModal-close-button {
+        font-size: 24px; /* Standard close button size */
+    }
+}

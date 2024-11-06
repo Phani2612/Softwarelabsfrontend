@@ -1,0 +1,95 @@
+.homenavbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end; /* Aligns navbar items to the right */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensures the navbar spans the full width of the container */
+}
+
+.nav-item {
+    white-space: nowrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+#loginbutton {
+    border-radius: 50px;
+    width: 100px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+/* body{
+
+    background-color: #282c34;
+} */
+
+
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .homenavbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-item {
+        font-size: 14px;
+    }
+
+    #loginbutton {
+        width: 80px;
+        margin: 0; 
+    }
+}
+
+/* Tablet (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .homenavbar {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 0 10px; /* Add padding to avoid overflow */
+        flex-wrap: wrap; /* Allow wrapping to avoid overflow */
+    }
+
+    .nav-item {
+        font-size: 16px;
+    }
+
+    #loginbutton {
+        width: auto; /* Let it adjust width naturally */
+        padding: 5px 15px;
+        margin-left: 5px;
+        white-space: nowrap; /* Prevent wrapping of the button text */
+    }
+}
+
+/* Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .homenavbar {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+    }
+
+    .nav-item {
+        font-size: 18px;
+    }
+
+    #loginbutton {
+        width: 100px;
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+}

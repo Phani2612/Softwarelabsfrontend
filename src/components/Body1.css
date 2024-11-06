@@ -1,0 +1,218 @@
+.Body1container{
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+    
+    justify-content: space-around;
+
+    margin-top: 100px;
+}
+
+
+
+#body1details{
+
+    align-items: center;
+}
+
+/* Image styling with skewed borders */
+
+#body1h1{
+
+    font-size: 70px;
+}
+
+h1{
+
+    color: white;
+}
+
+
+
+#Body1image {
+    width: 500px;
+    height: auto;
+    transform: skewY(10deg);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px aqua;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+
+ 
+  
+  }
+  
+  #Body1image::before,
+  #Body1image::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 10px;
+    transform: skewX(-5deg);
+    z-index: -1;
+    animation: borderAnimation 3s infinite ease-in-out;
+  }
+  
+  .imagecontainer::before {
+    border: 3px solid #ff7f50; /* Coral border */
+  }
+  
+  #imagecontainer::after {
+    border: 3px solid #1e90ff; /* Dodger blue border */
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+  }
+  
+  /* Animation for the borders */
+  @keyframes borderAnimation {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+
+  /* Styling for the primary button */
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 30px; /* Applies rounded corners on left and right */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Apply left and right rounded corners */
+  .btn-primary {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
+  /* Hover effect for the button */
+  .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+
+/* Mobile-first: Adjusting for smaller screens */
+@media (max-width: 600px) {
+    /* Body container */
+    .Body1container {
+        flex-direction: column; /* Stack the container vertically */
+        align-items: center; /* Center align items */
+        justify-content: center;
+        margin-top: 20px; /* Reduced margin */
+    }
+
+    /* Heading */
+    #body1h1 {
+        font-size: 36px; /* Reduced font size for smaller screens */
+        text-align: center;
+    }
+
+    h1{
+
+        font-size: 20px;
+    }
+
+    /* Image */
+    #Body1image {
+        width: 90%; /* Full width image on mobile */
+        transform: skewY(0deg); /* Remove skew effect for smaller screens */
+        box-shadow: 0 4px 10px aqua; /* Slightly reduced shadow */
+        margin: 30px;
+    }
+
+    /* Button */
+    .btn-primary {
+        width: 70%; /* Make button full width on mobile */
+        padding: 12px 0; /* Adjust padding for mobile */
+        font-size: 1.2em; /* Increase font size for readability */
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Body container */
+   #body1details{
+      
+       margin-left: 50px;
+       margin-right: 50px;
+
+       
+   }
+
+
+
+    /* Heading */
+    #body1h1 {
+        font-size: 40px; /* Slightly smaller font size for tablets */
+        text-align: center;
+    }
+
+    /* Image */
+    #Body1image {
+        width: 70%; /* 80% width for tablet screens */
+        transform: skewY(5deg); /* Slightly skewed effect */
+        box-sizing: border-box;
+    }
+
+    /* Button */
+   
+
+    h1{
+
+        font-size: medium;
+    }
+}
+
+/* Larger screens (desktops and larger) */
+@media (min-width: 1025px) {
+    /* Body container */
+    .Body1container {
+        flex-direction: row; /* Keep row layout for large screens */
+        justify-content: space-around; /* Evenly space out items */
+        margin-top: 100px; /* Keep top margin */
+    }
+
+    /* Heading */
+    #body1h1 {
+        font-size: 50px; /* Keep larger font size for desktops */
+    }
+
+    /* Image */
+    #Body1image {
+        width: 400px; /* Fixed width for desktop */
+        transform: skewY(10deg); /* Keep the skew effect */
+    }
+
+    h1{
+
+        font-size: 30px;
+    }
+
+    /* Button */
+    .btn-primary {
+        width: auto; /* Default width on desktop */
+        font-size: 1em; /* Default font size */
+    }
+}

@@ -1,0 +1,146 @@
+/* TreatmentModal.css */
+
+.treatment-modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    transition: opacity 0.3s ease;
+}
+
+.treatment-modal--open {
+    display: block; /* Show modal when open */
+    opacity: 1; /* Full opacity when visible */
+}
+
+.treatment-modal__content {
+    background-color: #fff; /* White background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+    width: 90%; /* Full width on small screens, limit on larger screens */
+    max-width: 500px; /* Max width */
+}
+
+.treatment-modal__title {
+    margin-bottom: 20px; /* Space below title */
+    font-size: 1.5rem; /* Larger font size */
+    color: #333; /* Dark color */
+}
+
+.treatment-modal label {
+    display: block; /* Make labels block level */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text */
+}
+
+.treatment-modal select,
+.treatment-modal textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner spacing */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.2s ease; /* Smooth border color change */
+}
+
+.treatment-modal select:focus,
+.treatment-modal textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.treatment-modal__button-container {
+    display: flex; /* Use flexbox for button layout */
+    justify-content: space-between; /* Space between buttons */
+}
+
+.treatment-modal__button {
+    padding: 10px 20px; /* Inner spacing */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.treatment-modal__button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.treatment-modal__button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+
+
+
+
+
+/* Media Queries */
+
+/* For devices with width 600px or less (e.g., mobile devices) */
+@media (max-width: 600px) {
+    .treatment-modal__content {
+        width: 95%; /* Take up 95% of the width on small screens */
+        margin: 20% auto; /* Increase margin for better alignment */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .treatment-modal__title {
+        font-size: 1.2rem; /* Slightly smaller title */
+    }
+
+    .treatment-modal select,
+    .treatment-modal textarea {
+        font-size: 0.9rem; /* Slightly smaller font for inputs */
+    }
+
+    .treatment-modal__button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Space out buttons */
+    }
+}
+
+/* For devices with width between 601px and 900px (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .treatment-modal__content {
+        width: 80%; /* Take up 80% of the width */
+        margin: 10% auto; /* Slightly less margin */
+    }
+
+    .treatment-modal__title {
+        font-size: 1.4rem; /* Slightly smaller title */
+    }
+
+    .treatment-modal select,
+    .treatment-modal textarea {
+        font-size: 1rem; /* Standard input font size */
+    }
+}
+
+/* For devices with width 901px or more (e.g., desktops) */
+@media (min-width: 901px) {
+    .treatment-modal__content {
+        width: 60%; /* Take up 60% of the width */
+        margin: 10% auto; /* Keep margin centered */
+    }
+
+    .treatment-modal__title {
+        font-size: 1.6rem; /* Larger font size for title */
+    }
+
+    .treatment-modal select,
+    .treatment-modal textarea {
+        font-size: 1.1rem; /* Larger font size for inputs */
+    }
+}

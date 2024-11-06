@@ -1,0 +1,118 @@
+/* Welcome.css */
+.welcome-container {
+    display: flex; /* Use flexbox to center items */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f7f7f7; /* Light background color */
+    color: #282c34; /* Dark text color */
+    text-align: center; /* Center text alignment */
+    padding: 20px; /* Spacing inside the container */
+    
+    
+}
+
+.welcome-icon {
+    font-size: 50px; /* Size of the icon */
+    color: #61dafb; /* Icon color */
+    margin-bottom: 20px; /* Space below the icon */
+}
+
+.welcome-title {
+    font-size: 24px; /* Title font size */
+    margin: 10px 0; /* Margin above and below the title */
+    color: black;
+}
+
+.welcome-message {
+    font-size: 16px; /* Message font size */
+    margin-bottom: 20px; /* Space below the message */
+}
+
+.start-project-button {
+    background-color: #61dafb; /* Button background color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Spacing inside the button */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    color: #282c34; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.start-project-button:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
+}
+
+
+
+
+
+
+/* Media Queries */
+
+/* For devices with width 600px or less (e.g., mobile devices) */
+@media (max-width: 600px) {
+    .welcome-icon {
+        font-size: 40px; /* Reduce icon size on small screens */
+        margin-bottom: 15px; /* Reduce margin below icon */
+    }
+
+    .welcome-title {
+        font-size: 20px; /* Smaller font size for title */
+        margin: 8px 0; /* Reduce margin for title */
+    }
+
+    .welcome-message {
+        font-size: 14px; /* Smaller font size for message */
+        margin-bottom: 15px; /* Reduce margin below message */
+    }
+
+    .start-project-button {
+        font-size: 14px; /* Smaller font size for button text */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* For devices with width between 601px and 900px (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .welcome-icon {
+        font-size: 45px; /* Slightly smaller icon on tablets */
+        margin-bottom: 18px; /* Adjust margin below icon */
+    }
+
+    .welcome-title {
+        font-size: 22px; /* Slightly smaller title font size */
+    }
+
+    .welcome-message {
+        font-size: 15px; /* Slightly smaller message font size */
+    }
+
+    .start-project-button {
+        font-size: 15px; /* Slightly smaller button text */
+        padding: 9px 18px; /* Adjust padding */
+    }
+}
+
+/* For devices with width 901px or more (e.g., desktops) */
+@media (min-width: 901px) {
+    .welcome-icon {
+        font-size: 50px; /* Keep icon size large for desktops */
+        margin-bottom: 20px; /* Keep margin consistent */
+    }
+
+    .welcome-title {
+        font-size: 24px; /* Standard font size for title */
+    }
+
+    .welcome-message {
+        font-size: 16px; /* Standard font size for message */
+    }
+
+    .start-project-button {
+        font-size: 16px; /* Standard font size for button */
+        padding: 10px 20px; /* Standard padding for larger screens */
+    }
+}

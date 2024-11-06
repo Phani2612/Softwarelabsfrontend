@@ -1,0 +1,297 @@
+/* src/components/Forgot.css */
+
+.forgot-container {
+    max-width: 400px;
+    margin: -30px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.forgot-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgot-input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.forgot-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.forgot-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.forgot-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.forgot-reset-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forgot-reset-button:hover {
+    background-color: #0056b3;
+}
+
+.forgot-message {
+    margin-top: 15px;
+    color: #28a745;
+    font-size: 14px;
+}
+
+.forgot-terms {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.forgot-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.forgetanddetails{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    margin-top: 150px;
+
+    margin-bottom: 100px;
+
+    margin-left: 200px;
+}
+
+#forgeth3 , #forgeth1{
+
+    color: white;
+}
+
+
+.forgetmaindiv{
+
+    height: 100vh;
+}
+
+
+
+/* For max-width 600px (small screens, such as smartphones) */
+@media (max-width: 600px) {
+    .forgot-container {
+        padding: 20px 10px;
+        max-width: 90%;
+    }
+
+    .forgot-title {
+        font-size: 20px;
+    }
+
+    .forgot-input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .forgot-reset-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .forgot-message {
+        font-size: 12px;
+    }
+
+    .forgot-terms {
+        font-size: 10px;
+    }
+
+    .forgot-link {
+        font-size: 12px;
+    }
+
+    .forgetanddetails {
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    #forgeth3, #forgeth1 {
+        font-size: 18px;
+    }
+
+    .forgetmaindiv{
+
+        height: 100%
+    }
+    
+}
+
+/* For max-width 768px (medium screens like tablets) */
+@media (max-width: 768px) {
+    .forgot-container {
+        padding: 30px 20px;
+        max-width: 80%;
+    }
+
+    .forgot-title {
+        font-size: 22px;
+    }
+
+    .forgot-input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .forgot-reset-button {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .forgot-message {
+        font-size: 13px;
+    }
+
+    .forgot-terms {
+        font-size: 11px;
+    }
+
+    .forgot-link {
+        font-size: 14px;
+    }
+
+    .forgetanddetails {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    #forgeth3, #forgeth1 {
+        font-size: 20px;
+    }
+}
+
+/* For max-width 1024px (larger screens, such as smaller laptops and desktops) */
+@media (max-width: 1024px) {
+    .forgot-container {
+        padding: 35px 20px;
+        max-width: 70%;
+    }
+
+    .forgot-title {
+        font-size: 24px;
+    }
+
+    .forgot-input {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .forgot-reset-button {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .forgot-message {
+        font-size: 14px;
+    }
+
+    .forgot-terms {
+        font-size: 12px;
+    }
+
+    .forgot-link {
+        font-size: 16px;
+    }
+
+    .forgetanddetails {
+        margin-top: 120px;
+        margin-left: 100px;
+    }
+
+    #forgeth3, #forgeth1 {
+        font-size: 22px;
+    }
+}
+
+/* For min-width 1200px (large screens, such as large laptops and desktops) */
+@media (min-width: 1200px) {
+    .forgot-container {
+        max-width: 400px;
+        padding: 40px 20px;
+    }
+
+    .forgot-title {
+        font-size: 24px;
+    }
+
+    .forgot-input {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .forgot-reset-button {
+        padding: 18px;
+        font-size: 18px;
+    }
+
+    .forgot-message {
+        font-size: 16px;
+    }
+
+    .forgot-terms {
+        font-size: 14px;
+    }
+
+    .forgot-link {
+        font-size: 18px;
+    }
+
+    .forgetanddetails {
+        margin-top: 150px;
+        margin-left: 200px;
+    }
+
+    #forgeth3, #forgeth1 {
+        font-size: 24px;
+    }
+}

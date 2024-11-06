@@ -1,0 +1,223 @@
+.email-login-form {
+
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Center text */
+    
+    width: 400px;
+
+    margin-top: -30px;
+
+    position: relative;
+   
+  }
+  
+  .form-title {
+    font-size: 24px; /* Increase title size */
+    margin-bottom: 20px; /* Space below title */
+    color: #333; /* Darker text color */
+  }
+  
+  .input-field {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    margin: 10px 0; /* Spacing between inputs */
+    border: 1px solid #ced4da; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.2s; /* Transition effect */
+  }
+  
+  .input-field:focus {
+    border-color: #80bdff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .back-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #007bff; /* Link color */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: underline; /* Underline text */
+    margin-bottom: 15px; /* Space below */
+  }
+  
+  .back-button:hover {
+    color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .btn {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect */
+  }
+  
+  .btn-light {
+    background-color: #f8f9fa; /* Light button color */
+    color: #343a40; /* Dark text */
+    border: 1px solid #ced4da; /* Border */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker on hover */
+  }
+  
+  .forgot-password-link {
+    display: block; /* Block display */
+    margin-top: 10px; /* Space above */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* No underline */
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .terms-text {
+    font-size: 12px; /* Smaller text */
+    color: #6c757d; /* Grey color */
+    margin-top: 20px; /* Space above */
+  }
+  
+  .terms-link,
+  .privacy-link {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* No underline */
+  }
+  
+  .terms-link:hover,
+  .privacy-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+
+  .error {
+    color: red; /* Color for error messages */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin-top: -15px; /* Space above the error message */
+    position: absolute;
+}
+
+
+.toggle-password-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-right: 15px;
+
+
+}
+
+
+
+/* Small devices (up to 600px) */
+@media (max-width: 600px) {
+  .email-login-form {
+    width: 90%; /* Reduce width */
+    padding: 15px; /* Reduce padding */
+
+    margin-top: 20px;
+
+    margin-left: 50px;
+  }
+
+  .form-title {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  .input-field {
+    padding: 8px; /* Reduce input padding */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .terms-text {
+    font-size: 10px; /* Smaller text */
+  }
+}
+
+/* Medium devices (600px to 768px) */
+@media (max-width: 768px) {
+  .email-login-form {
+    width: 80%; /* Adjust width */
+    padding: 18px; /* Adjust padding */
+
+    margin-top: 20px;
+
+    margin-left: 50px;
+  }
+
+  .form-title {
+    font-size: 22px; /* Adjust title size */
+  }
+
+  .input-field {
+    padding: 10px; /* Adjust input padding */
+  }
+
+  .btn {
+    padding: 9px 18px; /* Adjust button padding */
+  }
+
+  .terms-text {
+    font-size: 11px; /* Adjust terms text size */
+  }
+}
+
+/* Large devices (1024px and below) */
+@media (max-width: 1024px) {
+  .email-login-form {
+    width: 70%; /* Adjust width */
+    padding: 20px; /* Restore original padding */
+  }
+
+  .form-title {
+    font-size: 24px; /* Restore original title size */
+  }
+
+  .input-field {
+    padding: 10px; /* Adjust input padding */
+  }
+
+  .btn {
+    padding: 10px 20px; /* Restore original button padding */
+  }
+
+  .terms-text {
+    font-size: 12px; /* Restore original terms text size */
+  }
+}
+
+/* Extra large devices (1200px and above) */
+@media (min-width: 1200px) {
+  .email-login-form {
+    width: 400px; /* Original width */
+    padding: 20px; /* Restore original padding */
+  }
+
+  .form-title {
+    font-size: 24px; /* Original title size */
+  }
+
+  .input-field {
+    padding: 10px; /* Original input padding */
+  }
+
+  .btn {
+    padding: 10px 20px; /* Original button padding */
+  }
+
+  .terms-text {
+    font-size: 12px; /* Original terms text size */
+  }
+}

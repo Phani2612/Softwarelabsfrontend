@@ -1,0 +1,141 @@
+.script-display {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    justify-content: space-between; /* Space out the boxes */
+    margin: 20px; /* Add some margin around the display area */
+}
+
+.script-item {
+    position: relative; /* Position relative for dropdown positioning */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Border to define the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    width: calc(50% - 10px); /* Two boxes per row with space in between */
+    margin-bottom: 20px; /* Space between rows */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation on hover */
+}
+
+.script-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.script-item h3 {
+    color: #333; /* Dark text color for headings */
+    margin: 0 0 10px; /* Space below the heading */
+}
+
+.script-meta {
+    background-color: #e9ecef; /* Light gray background for the meta section */
+    padding: 10px; /* Padding inside the meta section */
+    border-radius: 5px; /* Rounded corners for the meta section */
+    margin-bottom: 15px; /* Space below the meta section */
+}
+
+.script-meta span {
+    display: inline-block; /* Ensure elements are in-line */
+    margin-right: 10px; /* Space between genre and language */
+    color: #555; /* Color for the genre and language */
+}
+
+.script-options {
+    position: absolute; /* Position the dropdown relative to the box */
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+    cursor: pointer; /* Show pointer on hover */
+
+  
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position relative to the script item */
+    background-color: white; /* White background for dropdown */
+    border: 1px solid #ddd; /* Border for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    z-index: 10; /* Make sure dropdown appears above other elements */
+
+    
+   
+}
+
+.dropdown-menu.show {
+    display: block; /* Show dropdown when active */
+    margin-left: -150px;
+}
+
+.dropdown-item {
+    padding: 10px; /* Padding for each item */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #333; /* Text color */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+
+#particular-h2{
+
+    margin-top: 30px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .script-item {
+        width: calc(100% - 20px); /* Single item per row with smaller spacing */
+        margin-bottom: 15px; /* Adjust space between rows */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .script-display {
+        margin: 10px; /* Reduce margin for mobile screens */
+    }
+
+    .script-options {
+        top: 5px; /* Adjust position for small screens */
+        right: 5px; /* Adjust position for small screens */
+    }
+
+    .dropdown-menu {
+        margin-left: 0; /* Remove the left margin for dropdown */
+    }
+}
+
+/* For medium screens (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .script-item {
+        width: calc(50% - 10px); /* Two items per row with space between */
+        margin-bottom: 20px; /* Keep space between rows */
+    }
+
+    .script-display {
+        margin: 15px; /* Moderate margin for tablets */
+    }
+
+    .script-options {
+        top: 8px; /* Adjust position for tablet screens */
+        right: 8px; /* Adjust position for tablet screens */
+    }
+}
+
+/* For large screens (Desktop) */
+@media (min-width: 1025px) {
+    .script-item {
+        width: calc(25% - 10px); /* Four items per row with space between */
+        margin-bottom: 20px; /* Keep space between rows */
+    }
+
+    .script-display {
+        margin: 20px; /* Larger margin for desktop */
+    }
+
+    .script-options {
+        top: 10px; /* Adjust position for large screens */
+        right: 10px; /* Adjust position for large screens */
+    }
+}

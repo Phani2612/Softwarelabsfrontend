@@ -1,0 +1,248 @@
+/* Dashboard.css */
+.dashboard-container {
+    display: flex; /* Use flexbox to align sidebar and content */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent overflow on the main container */
+}
+
+.dashboard-content {
+    flex-grow: 1; /* Allow this area to grow to fill remaining space */
+    margin-left: 250px; /* Offset for the sidebar */
+    margin-top: 60px; /* Offset for the navbar height */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f7f7f7; /* Background color for the content area */
+    overflow-y: auto; /* Enable scrolling for content if needed */
+    
+}
+
+/* Dashboard.css */
+.project-summary {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+
+.project-title{
+
+    display: flex;
+
+    flex-direction: row;
+
+    
+}
+
+.project-title img {
+    width: 50px; /* Adjust as needed */
+    height: 35px;
+}
+
+.project-synopsis {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.project-image img {
+    width: 100%; /* Responsive image */
+    height: 200px;
+    border-radius: 4px;
+   
+}
+
+
+#project-summary-h4{
+
+    color: black;
+}
+
+
+
+
+
+
+/* For max-width 600px (small screens, such as smartphones) */
+@media (max-width: 600px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack sidebar and content */
+        height: auto; /* Allow content to adjust based on height */
+        overflow: visible; /* Allow scrolling of the entire page */
+    }
+
+   
+    .dashboard-content {
+        margin-left: 0;
+        margin-top: 50px; /* Reduced margin for smaller screens */
+        padding: 10px;
+    }
+
+    
+    .project-summary {
+        padding: 12px; /* Adjust padding */
+        margin-top: 15px; /* Reduced margin */
+    }
+
+    .project-title {
+        flex-direction: column; /* Stack title elements vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .project-title img {
+        width: 40px; /* Reduce image size */
+        height: 30px;
+    }
+
+    .project-synopsis {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .project-image img {
+        height: 150px; /* Reduce image height */
+    }
+
+    #project-summary-h4 {
+        font-size: 18px; /* Smaller heading font */
+    }
+}
+
+/* For max-width 768px (medium screens like tablets) */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack sidebar and content */
+        height: auto; /* Adjust height */
+        overflow: visible; /* Allow scrolling of the page */
+    }
+
+
+    .dashboard-content {
+        margin-left: 0;
+        margin-top: 60px; /* Keep navbar margin */
+        padding: 15px;
+    }
+
+   
+
+    .project-summary {
+        padding: 14px;
+        margin-top: 18px;
+    }
+
+    .project-title {
+        flex-direction: row; /* Keep title row layout */
+    }
+
+    .project-title img {
+        width: 45px; /* Adjust image size */
+        height: 35px;
+    }
+
+    .project-synopsis {
+        font-size: 15px; /* Slightly smaller font size */
+    }
+
+    .project-image img {
+        height: 175px; /* Adjust image height */
+    }
+
+    #project-summary-h4 {
+        font-size: 20px;
+    }
+}
+
+/* For max-width 1024px (larger screens like small laptops or larger tablets) */
+@media (max-width: 1024px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack sidebar and content */
+        height: auto;
+        overflow: visible;
+
+       
+    }
+
+
+
+    .dashboard-content {
+        margin-left: 0;
+        margin-top: 70px; /* Adjust for navbar */
+        padding: 20px;
+    }
+    
+
+    .project-summary {
+        padding: 16px;
+        margin-top: 20px;
+    }
+
+    .project-title {
+        flex-direction: row; /* Keep title row layout */
+    }
+
+    .project-title img {
+        width: 50px; /* Standard image size */
+        height: 35px;
+    }
+
+    .project-synopsis {
+        font-size: 16px;
+    }
+
+    .project-image img {
+        height: 200px; /* Standard image height */
+    }
+
+    #project-summary-h4 {
+        font-size: 22px;
+    }
+}
+
+/* For min-width 1200px (large screens like desktops) */
+@media (min-width: 1200px) {
+    .dashboard-container {
+        display: flex;
+        flex-direction: row; /* Horizontal layout for larger screens */
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .dashboard-content {
+        margin-left: 250px; /* Sidebar offset */
+        margin-top: 60px; /* Navbar offset */
+        padding: 20px;
+        background-color: #f7f7f7;
+        overflow-y: auto;
+    }
+
+    .project-summary {
+        padding: 16px;
+        margin-top: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .project-title {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .project-title img {
+        width: 50px;
+        height: 35px;
+    }
+
+    .project-synopsis {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 200px;
+        border-radius: 4px;
+    }
+
+    #project-summary-h4 {
+        color: black;
+        font-size: 24px;
+    }
+}

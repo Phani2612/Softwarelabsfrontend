@@ -1,0 +1,116 @@
+.footercontainer{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    justify-content: space-around;
+
+    margin-top: 40px;
+}
+
+#footerheader6{
+
+    color : white;
+
+    text-align: center;
+}
+
+#footericon{
+
+    padding-left: 10px;
+
+
+   
+}
+
+#footerh4{
+
+    color: white;
+
+}
+
+
+@media (max-width: 600px) {
+    /* Footer container */
+    .footercontainer {
+        flex-direction: column; /* Stack footer items vertically on mobile */
+        justify-content: center; /* Center align items */
+        align-items: center; /* Ensure the content is centered */
+        margin-top: 20px; /* Reduce top margin on smaller screens */
+    }
+
+    /* Footer header */
+    #footerheader6 {
+        font-size: 18px; /* Smaller font size for mobile */
+        margin-bottom: 10px; /* Add some space below the header */
+    }
+
+    /* Footer icon */
+    #footericon {
+        padding-left: 0; /* Remove left padding for mobile */
+        margin-top: 10px; /* Add top margin to space out icons */
+    }
+
+    /* Footer h4 */
+    #footerh4 {
+        font-size: 14px; /* Adjust text size for mobile */
+        margin-top: 10px; /* Add margin to top of footer text */
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Footer container */
+    .footercontainer {
+        flex-direction: row; /* Keep footer items in row */
+        justify-content: space-between; /* Space out footer items evenly */
+        margin-top: 30px; /* Slightly smaller top margin for tablets */
+    }
+
+    /* Footer header */
+    #footerheader6 {
+        font-size: 20px; /* Larger font size for tablets */
+        margin-bottom: 15px;
+    }
+
+    /* Footer icon */
+    #footericon {
+        padding-left: 5px; /* Slightly reduce padding */
+    }
+
+    /* Footer h4 */
+    #footerh4 {
+        font-size: 16px; /* Slightly larger text size for tablets */
+    }
+}
+
+/* Larger screens (desktops and larger) */
+
+
+@media (min-width: 1025px) {
+    /* Footer container */
+    .footercontainer {
+        flex-direction: row; /* Keep footer items in row for large screens */
+        justify-content: space-around; /* Space out items evenly */
+        margin-top: 40px; /* Maintain top margin for larger screens */
+    }
+
+    /* Footer header */
+    #footerheader6 {
+        font-size: 24px; /* Larger font size for desktop */
+        margin-bottom: 20px;
+    }
+
+    /* Footer icon */
+    #footericon {
+        padding-left: 10px; /* Normal padding for desktop */
+    }
+
+    /* Footer h4 */
+    #footerh4 {
+        font-size: 18px; /* Larger text for desktop */
+    }
+}

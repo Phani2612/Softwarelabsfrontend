@@ -1,0 +1,123 @@
+.loginmodalcontainer{
+
+   height: 100vh;
+
+   background-color: #282c34;
+}
+
+
+.loginanddetails{
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+
+  justify-content: space-around;
+
+  margin-top: 100px;
+
+  margin-bottom: 120px;
+}
+
+
+#loginmodalh3 , #loginmodalh1{
+
+   color: white;
+}
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and below) */
+@media (max-width: 600px) {
+  .loginmodalcontainer {
+    padding: 10px;
+  }
+
+  .login-options,
+  .email-login-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .loginanddetails {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  #loginmodalh3,
+  #loginmodalh1 {
+    font-size: 1.5rem;
+  }
+
+  .forgot-password-link {
+    font-size: 0.85em;
+  }
+
+  .loginmodalcontainer{
+
+    height: 100%
+ }
+}
+
+/* Medium devices (landscape tablets and smaller desktops, 768px and below) */
+@media (max-width: 768px) {
+  .login-options,
+  .email-login-form {
+    max-width: 90%;
+  }
+
+  .loginanddetails {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 120px;
+  }
+
+  #loginmodalh3,
+  #loginmodalh1 {
+    font-size: 1.8rem;
+  }
+
+  .forgot-password-link {
+    font-size: 0.95em;
+  }
+
+  .loginmodalcontainer{
+
+    height: 100%
+ }
+}
+
+/* Large devices (laptops/desktops, 1024px and below) */
+@media (max-width: 1024px) {
+  .login-options,
+  .email-login-form {
+    max-width: 80%;
+    padding: 25px;
+  }
+
+  .loginanddetails {
+    margin-top: 80px;
+    margin-bottom: 130px;
+  }
+
+  #loginmodalh3,
+  #loginmodalh1 {
+    font-size: 2rem;
+  }
+
+  .loginmodalcontainer{
+
+    height: 100%
+ }
+}
+

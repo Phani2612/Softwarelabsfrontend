@@ -1,0 +1,317 @@
+/* .body4container{
+
+    margin-top: 50px;
+
+    text-align: center;
+
+   
+}
+
+#screen , #director , #producer{
+
+    margin-left: 20px;
+}
+
+.renderdata{
+
+    display: flex;
+
+    flex-direction: row;
+
+
+}
+
+
+#body4header1{
+
+    color: white;
+
+    
+}
+
+#body4header4{
+
+    color: gray;
+}
+
+
+.details{
+
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    justify-content: space-around;
+}
+
+
+#details1 , #details2 , #details3{
+
+    margin-top: 40px;
+}
+
+
+.body4icon{
+
+    color: yellow;
+
+    height: 40px;
+
+    width: 40px;
+}  */
+
+
+
+
+
+
+.body4container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#screen, #director, #producer {
+    margin-left: 20px;
+
+    border-radius: 30px 30px; /* 30px radius for both left and right sides */
+}
+
+.renderdata {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Ensuring data is centered */
+}
+
+#body4header1 {
+    color: white;
+    margin-top: 40px;
+}
+
+#body4header4 {
+    color: gray;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px; /* Added margin to separate from content above */
+}
+
+#details1, #details2, #details3 {
+    margin: 20px; /* Consistent spacing around details */
+}
+
+.body4icon {
+    color: yellow;
+    height: 60px;
+    width: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282c34; /* Blue background color */
+    /* White color for the icon */
+border-radius: 50%;       /* Makes the container circular */
+border: 2px solid rgba(255, 255, 255, 0.5); /* Light circular border */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds shadow */
+font-size: 1.5em;         /* Icon size */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+margin-right: 10px;
+}
+
+
+.icon1-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;              /* Width of the circular background */
+    height: 50px;             /* Height of the circular background */
+    background-color: #282c34; /* Blue background color */
+           /* White color for the icon */
+    border-radius: 50%;       /* Makes the container circular */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Light circular border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds shadow */
+    font-size: 1.5em;         /* Icon size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    margin-right: 10px;
+}
+
+/* Optional hover effect */
+.icon-circle:hover {
+    transform: scale(1.1);     /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+
+
+
+
+
+/* Base styles for larger screens (default) */
+
+/* Mobile-first: Adjusting for smaller screens */
+@media (max-width: 600px) {
+    /* Body container */
+    .body4container {
+        margin-top: 40px; /* Reduced top margin for smaller screens */
+    }
+
+    /* Header */
+    #body4header1 {
+        margin-top: 20px; /* Adjusted for mobile */
+        font-size: 24px; /* Smaller font size for header */
+    }
+
+    #body4header4 {
+        font-size: 16px; /* Smaller font size for smaller screens */
+    }
+
+    /* Buttons */
+    #screen, #director, #producer {
+        width: 100%; /* Full width for mobile */
+        margin-top: 5px;
+        margin-left: 0;
+        margin-right: 0; /* Remove left-right margin */
+        padding: 10px; /* Padding for better clickability */
+    }
+
+    /* Flexbox adjustments */
+    .renderdata {
+        flex-direction: column; /* Stack data vertically */
+        align-items: center; /* Center-align for mobile */
+    }
+
+    /* Details section */
+    .details {
+        flex-direction: column; /* Stack details vertically */
+        justify-content: center; /* Center content */
+        margin-top: 20px;
+    }
+
+    #details1, #details2, #details3 {
+        margin: 10px 0; /* Reduced margin for mobile */
+        text-align: center; /* Center-align text */
+    }
+
+    /* Icon adjustments */
+    .body4icon, .icon1-circle {
+        width: 50px;
+        height: 50px; /* Smaller icons */
+        font-size: 1.2em; /* Smaller icon font size */
+    }
+
+    /* Hover effect adjustments */
+    .icon-circle:hover {
+        transform: scale(1.05); /* Slightly less scaling */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Lighter shadow on hover */
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Body container */
+    .body4container {
+        margin-top: 60px; /* Slightly larger margin for tablets */
+    }
+
+    /* Header */
+    #body4header1 {
+        font-size: 28px; /* Larger font size for tablets */
+    }
+
+    #body4header4 {
+        font-size: 18px;
+    }
+
+    /* Buttons */
+    #screen, #director, #producer {
+       
+        margin-left: 10px;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    /* Flexbox adjustments */
+    .renderdata {
+        flex-direction: row; /* Keep row direction for tablets */
+    }
+
+    .details {
+        flex-direction: row; /* Keep horizontal layout for details */
+        justify-content: space-between; /* Space out the items */
+    }
+
+    #details1, #details2, #details3 {
+        margin: 15px; /* More space between details for tablets */
+    }
+
+    /* Icon adjustments */
+    .body4icon, .icon1-circle {
+        width: 60px;
+        height: 60px; /* Larger icons for tablets */
+        font-size: 1.4em;
+    }
+
+    /* Hover effect adjustments */
+    .icon-circle:hover {
+        transform: scale(1.1); /* Slightly larger on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Larger screens (desktops and larger) */
+@media (min-width: 1025px) {
+    /* Body container */
+    .body4container {
+        margin-top: 100px;
+    }
+
+    /* Header */
+    #body4header1 {
+        font-size: 36px; /* Large font size for desktop */
+    }
+
+    #body4header4 {
+        font-size: 20px;
+    }
+
+    /* Buttons */
+    #screen, #director, #producer {
+         /* Narrower buttons for larger screens */
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+
+    /* Flexbox adjustments */
+    .renderdata {
+        flex-direction: row; /* Row layout for larger screens */
+    }
+
+    .details {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #details1, #details2, #details3 {
+        margin: 20px;
+    }
+
+    /* Icon adjustments */
+    .body4icon, .icon1-circle {
+        width: 70px;
+        height: 70px; /* Larger icons for desktop */
+        font-size: 1.6em;
+    }
+
+    /* Hover effect adjustments */
+    .icon-circle:hover {
+        transform: scale(1.15); /* Slightly larger on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    }
+}

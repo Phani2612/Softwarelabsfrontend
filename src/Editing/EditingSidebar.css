@@ -1,0 +1,39 @@
+/* SimpleSidebar.css */
+
+.simple-sidebar {
+    width: 80px; /* Adjust width as needed */
+    height: 100vh;
+    background-color: #3a3a3a;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Media Queries */
+
+/* For devices with width 600px or less (e.g., mobile devices) */
+@media (max-width: 600px) {
+    .simple-sidebar {
+        width: 60px; /* Reduce sidebar width for small screens */
+    }
+}
+
+/* For devices with width between 601px and 900px (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .simple-sidebar {
+        width: 70px; /* Adjust sidebar width for medium screens */
+    }
+}
+
+/* For devices with width 901px or more (e.g., desktops) */
+@media (min-width: 901px) {
+    .simple-sidebar {
+        width: 80px; /* Standard sidebar width for larger screens */
+    }
+}

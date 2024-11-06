@@ -1,0 +1,217 @@
+.RegisterForm {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    margin-bottom: 40px;
+    position: relative;
+    
+}
+
+.RegisterForm-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.RegisterForm-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.RegisterForm-group {
+    margin-bottom: 20px;
+}
+
+.RegisterForm-group label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.RegisterForm-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.RegisterForm-phoneContainer {
+    width: 100%;
+}
+
+.RegisterForm-phoneInput {
+    width: 100% !important;
+    padding: 10px;
+    border: 1px solid #ddd !important;
+    border-radius: 5px;
+}
+
+.RegisterForm-passwordField {
+    display: flex;
+    align-items: center;
+}
+
+.RegisterForm-togglePassword {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: -40px;
+    color: #888;
+
+}
+
+.RegisterForm-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.RegisterForm-submitButton {
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.RegisterForm-submitButton:hover {
+    background-color: #0056b3;
+}
+
+
+.registercontainer{
+
+    background-color: #282c34;
+    height: 100vh
+}
+
+
+
+
+
+
+
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+    .RegisterForm {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .RegisterForm-title {
+        font-size: 20px;
+    }
+
+    .RegisterForm-input,
+    .RegisterForm-phoneInput {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .RegisterForm-submitButton {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .RegisterForm-error {
+        font-size: 12px;
+    }
+
+    .RegisterForm-togglePassword {
+        font-size: 16px;
+    }
+
+    .registercontainer{
+
+        
+        height: 100%
+    }
+
+
+ 
+}
+
+/* For screens smaller than 480px (small mobile devices) */
+@media (max-width: 480px) {
+    .RegisterForm {
+        padding: 15px;
+    }
+
+    .RegisterForm-title {
+        font-size: 18px;
+    }
+
+    .RegisterForm-input,
+    .RegisterForm-phoneInput {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .RegisterForm-submitButton {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .RegisterForm-error {
+        font-size: 12px;
+    }
+
+    .RegisterForm-togglePassword {
+        font-size: 14px;
+    }
+
+    /* Ensure the password field button is more centered */
+    .RegisterForm-passwordField {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .registercontainer{
+
+        
+        height: 100%
+    }
+}
+
+/* For larger screens such as desktops and laptops */
+@media (min-width: 1024px) {
+    .RegisterForm {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .RegisterForm-title {
+        font-size: 28px;
+    }
+
+    .RegisterForm-input,
+    .RegisterForm-phoneInput {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .RegisterForm-submitButton {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .RegisterForm-togglePassword {
+        font-size: 20px;
+    }
+
+}

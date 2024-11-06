@@ -1,0 +1,192 @@
+/* ActOneModal.css */
+
+.actone-modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    transition: opacity 0.3s ease;
+}
+
+.actone-modal--open {
+    display: block; /* Show modal when open */
+    opacity: 1; /* Full opacity when visible */
+}
+
+.actone-modal__content {
+    background-color: #fff; /* White background */
+    margin: 10% auto; /* Centered with top margin */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow */
+    width: 90%; /* Full width on small screens */
+    max-width: 600px; /* Max width */
+    position: relative;
+}
+
+.actone-modal__title {
+    margin-bottom: 15px; /* Space below title */
+    font-size: 1.8rem; /* Larger font size */
+    color: #333; /* Dark color */
+    text-align: center; /* Centered title */
+}
+
+.actone-modal__description {
+    margin-bottom: 20px; /* Space below description */
+    font-size: 1rem; /* Regular font size */
+    color: #555; /* Slightly lighter text */
+    padding: 15px; /* Inner padding for description */
+    border: 1px solid #e0e0e0; /* Light border for description box */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.actone-modal__textarea {
+    width: 100%; /* Full width */
+    height: 150px; /* Fixed height */
+    padding: 10px; /* Inner spacing */
+    margin-bottom: 20px; /* Space below textarea */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.2s ease; /* Smooth border color change */
+    resize: none; /* Prevent resizing */
+}
+
+.actone-modal__textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.actone-modal__button-container {
+    text-align: center; /* Center button */
+}
+
+.actone-modal__button {
+    padding: 10px 20px; /* Inner spacing */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.actone-modal__button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.actone-modal__button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+
+.scriptModal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+    
+}
+
+.scriptModal-close-button:hover {
+    color: #333;
+}
+
+
+
+
+
+
+
+/* For Small Screens (Mobile Devices) */
+@media (max-width: 600px) {
+    .actone-modal__content {
+        width: 90%; /* Full width on small screens */
+        margin: 10% auto; /* Center modal with margin on top */
+        padding: 15px; /* Reduced padding */
+    }
+
+    .actone-modal__title {
+        font-size: 1.5rem; /* Smaller title on mobile */
+    }
+
+    .actone-modal__description {
+        font-size: 0.9rem; /* Slightly smaller font for description */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .actone-modal__textarea {
+        height: 120px; /* Slightly smaller textarea */
+    }
+
+    .actone-modal__button {
+        padding: 8px 16px; /* Smaller button padding */
+    }
+
+    .scriptModal-close-button {
+        top: 10px; /* Closer to the top of the modal */
+        right: 10px; /* Closer to the right side */
+    }
+}
+
+/* For Medium Screens (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .actone-modal__content {
+        width: 80%; /* Slightly smaller modal */
+        margin: 15% auto; /* Adjusted margin */
+    }
+
+    .actone-modal__title {
+        font-size: 1.6rem; /* Adjust font size for tablets */
+    }
+
+    .actone-modal__description {
+        font-size: 1rem; /* Regular font size for tablets */
+        padding: 12px; /* Adjust padding */
+    }
+
+    .actone-modal__textarea {
+        height: 130px; /* Slightly smaller textarea */
+    }
+
+    .actone-modal__button {
+        padding: 9px 18px; /* Slightly smaller button */
+    }
+}
+
+/* For Large Screens (Desktop) */
+@media (min-width: 1025px) {
+    .actone-modal__content {
+        width: 60%; /* Narrower modal for larger screens */
+        margin: 10% auto; /* Center modal */
+    }
+
+    .actone-modal__title {
+        font-size: 1.8rem; /* Larger title */
+    }
+
+    .actone-modal__description {
+        font-size: 1.1rem; /* Larger font for description */
+        padding: 15px; /* Regular padding */
+    }
+
+    .actone-modal__textarea {
+        height: 150px; /* Regular textarea size */
+    }
+
+    .actone-modal__button {
+        padding: 10px 20px; /* Regular button size */
+    }
+}
