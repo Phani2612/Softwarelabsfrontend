@@ -79,6 +79,8 @@ const [showPassword, setShowPassword] = useState(false); // State to toggle pass
 
                     window.location.href = redirect_url;
 
+                  
+
                 } else {
                     // Handle cases where login is unsuccessful but no redirect
                     console.log('Login response:', message);
